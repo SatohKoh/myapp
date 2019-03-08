@@ -1,27 +1,9 @@
 <% provide(:title, 'Sign up') %>
+<% provide(:button_text, '登録する') %>
 <h1>ご利用登録</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user, url: signup_path) do |f| %>
-      <%= render 'shared/error_messages' %>
-
-      <%= f.label :status %>
-      <%= f.select :status, [["農家", "農家"], ["家庭菜園", "家庭菜園"], ["その他", "その他"]], :prompt => "ステータスを選択してください", class: 'form-control' %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "登録する", class: "btn btn-primary" %>
-    <% end %>
+    <%= render 'form' %>
   </div>
 </div>

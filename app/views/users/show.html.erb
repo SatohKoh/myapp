@@ -4,8 +4,13 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
       </h1>
     </section>
   </aside>
+</div>
+<div>
+  <%= @user.status %><br>
+  <%= @user.name %><br>
+  <%= @user.email %><br>
+  <%= link_to "変更する", edit_user_path(current_user) %>
 </div>
