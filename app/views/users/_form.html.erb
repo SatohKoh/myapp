@@ -1,5 +1,5 @@
 <%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages', object: @user %>
+  <%= render 'shared/error_messages', object: f.object %>
 
   <%= f.label :status %>
   <%= f.select :status, [["農家", "農家"], ["家庭菜園", "家庭菜園"], ["その他", "その他"]], :prompt => "ステータスを選択してください", class: 'form-control' %>
